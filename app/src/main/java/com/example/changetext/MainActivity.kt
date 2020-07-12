@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         }
         button2.setOnClickListener {
             textView.text = button2.text
+            println("aaaaaa")
         }
     }
 }
