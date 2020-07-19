@@ -24,12 +24,14 @@ class MainActivity : AppCompatActivity() {
 class Count {
     private var sum = 0
 
-    fun addMinasu() {
-        this.sum = this.sum - 1
-    }
     fun addSum() {
         this.sum = this.sum + 1
     }
+
+    fun addMinasu() {
+        this.sum = this.sum - 1
+    }
+
 
     fun getSum(): Int {
         return  this.sum
