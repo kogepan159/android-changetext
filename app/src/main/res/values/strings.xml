@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">changetext</string>
-    <string name="oha">おはよ</string>
-    <string name="oyasumi">おやすみ</string>
+    <string name="oha">-1</string>
+    <string name="oyasumi">+1</string>
 </resources>

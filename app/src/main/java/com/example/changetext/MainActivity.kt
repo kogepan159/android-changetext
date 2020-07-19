@@ -5,38 +5,35 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    val count:Count = Count()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         button.setOnClickListener {
-            textView.text = "おやすみ"
+            count.addSum()
+            textView.text = count.getSum().toString()
         }
         button2.setOnClickListener {
-            textView.text = button2.text
+            count.addMinasu()
+            textView.text = count.getSum().toString()
             println("aaaaaa")
         }
-
-        val dog: Dog = Dog()
-        dog.setName("ココア")
-        dog.setName("アイス")
-        println(dog.getName())
-
-        val cat = Cat("ココア")
-        println(cat.name)
-
-        fun String.sum(a: String, b:String) = "[" + a + b + "]"
     }
 }
 
-class Cat(val name: String) {}
+class Count {
+    private var sum = 0
 
-class Dog {
-    private var name  = ""
-    public fun setName(name: String) {
-        this.name = name
+    fun addMinasu() {
+        this.sum = this.sum - 1
     }
-    fun getName() : String {
-        return name
+    fun addSum() {
+        this.sum = this.sum + 1
     }
+
+    fun getSum(): Int {
+        return  this.sum
+    }
+
 }
 
