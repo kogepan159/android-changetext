@@ -9,34 +9,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         button.setOnClickListener {
-            textView.text = "おやすみ"
+            textView.text = textView.text as String + button.text
         }
         button2.setOnClickListener {
-            textView.text = button2.text
-            println("aaaaaa")
+            textView.text = textView.text as String + button2.text
         }
 
-        val dog: Dog = Dog()
-        dog.setName("ココア")
-        dog.setName("アイス")
-        println(dog.getName())
-
-        val cat = Cat("ココア")
-        println(cat.name)
-
-        fun String.sum(a: String, b:String) = "[" + a + b + "]"
     }
 }
 
-class Cat(val name: String) {}
 
-class Dog {
-    private var name  = ""
-    public fun setName(name: String) {
-        this.name = name
-    }
-    fun getName() : String {
-        return name
-    }
-}
 
