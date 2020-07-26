@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener {
             this.count = count - 1
             textView.text = count.toString()
-            println("aaaaaa")
+            println("aaaaaa  bbbb")
         }
     }
 }
